@@ -41,7 +41,7 @@ https://mp.weixin.qq.com/s/bUF9goso0xDaP9WvGf0xZA
 
 >   相关文章👉[STM32代码的启动过程](http://mp.weixin.qq.com/s?__biz=MzI1MDg4OTMwMw==&mid=2247493548&idx=2&sn=f23366851334e82a4003eea56ab4e67c&chksm=e9f9f294de8e7b821a56ea0557349b41eaf8881cfe923a24542845a254d4479032ad5518b0c4&scene=21#wechat_redirect) 👉[详解STM32启动文件](http://mp.weixin.qq.com/s?__biz=MzI1MDg4OTMwMw==&mid=2247494889&idx=3&sn=1aca7d45a873c84fd58d362c41c4649e&chksm=e9f9f9d1de8e70c76a8aadb4eb84a595bcfefa662f07789c00c1b15d3657d94e0c47516c26b6&scene=21#wechat_redirect) 👉[STM32CubeMX介绍](http://mp.weixin.qq.com/s?__biz=MzI1MDg4OTMwMw==&mid=2247485809&idx=1&sn=4a43f461d1a4582b8cca04feb7df15dc&chksm=e9fa1c49de8d955fe3c5009f50bd69b16d7aa1ae2d985b69d06b78ad0becbfb33e79799a6e1f&scene=21#wechat_redirect) 👉[STM32实例-用按键控制串口发送数据，文末附代码](http://mp.weixin.qq.com/s?__biz=MzI1MDg4OTMwMw==&mid=2247495643&idx=1&sn=d48c4d6dba9aaa909d47ae8e74521851&chksm=e9f9fae3de8e73f565824ff3a5d3377094e8e8fee51281a20a2910caf78121f3b93645af874f&scene=21#wechat_redirect) 👉[详解STM32单片机的堆栈](http://mp.weixin.qq.com/s?__biz=MzI1MDg4OTMwMw==&mid=2247495515&idx=4&sn=7c874d7ec0aabbdc06e31e08e7a4397c&chksm=e9f9fa63de8e7375392343385985c4646d2ad77684c1fbe5476d197c024a8f2cea0c34a832da&scene=21#wechat_redirect)
 
-如大部分外设模块都要进行时钟使能，GPIO就要配置引脚的上拉/下拉，推挽/开漏，USART配置模式，波特率，奇偶校验，停止位，数据位，还要考虑对应GPIO的端口复用，I2C就要考虑主从模式，根据需要的传输速率确定模块时钟，SDRAM除了考虑引脚复用，时序，还要计算刷新时间来保证数据的稳定，这些知识理论上都是长期在工作中积累出来的。
+如大部分外设模块都要进行**时钟使能**，GPIO就要配置引脚的上拉/下拉，推挽/开漏，USART配置模式，波特率，奇偶校验，停止位，数据位，还要考虑对应GPIO的端口复用，I2C就要考虑主从模式，根据需要的传输速率确定模块时钟，SDRAM除了考虑引脚复用，时序，还要计算刷新时间来保证数据的稳定，这些知识理论上都是长期在工作中积累出来的。
 
 在项目需求确定后，根据芯片和器件选型，就能够确定硬件PCB的绘图和布置，功能需求也能确定，如访问外部EPPROM，那么I2C就确定为主模式，并根据EPPROM的读写时序和芯片的性能，考虑到效率和稳定的平衡，就可以确定I2C的速率，考虑布局和其它需求，I2C对应的复用引脚也能确定。
 

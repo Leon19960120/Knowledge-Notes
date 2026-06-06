@@ -78,7 +78,7 @@ di{             // 删除花括号里的内容
 | `uname -r`                 | 查看内核版本                                                 |
 | `df -T`                    | 查看文件系统                                                 |
 | `su - root`                | 切换到root用户                                               |
-| `cat /proc/cpuinfo`        | 查看cup信息                                                  |
+| `cat /proc/cpuinfo`        | 查看cpu信息                                                  |
 | `tar -xzf xxx.tar.gz`      | 库包解压指令                                                 |
 | `sudo -i`                  | 切换到root用户                                               |
 | `su xx`                    | 切换到xx用户                                                 |
